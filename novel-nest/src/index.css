@@ -1,0 +1,140 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Navbar */
+
+.navbar .container-fluid .navbar-brand {
+  font-family: 'Lora', serif;
+  font-weight: 800;  
+  font-size: 2rem;
+  color: #e58f23;  
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  color: #2c2b3d;  
+  font-weight: 500;  
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #1ac1b5;  
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 1.5rem; 
+  color: #2c2b3d;  
+}
+
+.cart-icon__badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #e58f23; 
+  color: white;
+}
+
+/* BookList */
+
+.container .booklist-title {
+  color: #2c2b3d;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  font-size: 2rem; 
+}
+
+.container .card-custom {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  height: 100%;  
+  font-family: 'Lora', serif;
+  
+}
+
+.container .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container .book-title {
+  color: #e58f23;
+  font-size: 1.7rem; 
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.container .book-price {
+  color: #1ac1b5;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.container .card-text.text-muted {
+  color: #7f8c8d;
+}
+
+/* Button styles */
+.container .btn-readmore, .container .btn-buynow {
+  padding: 6px 18px;  
+  font-weight: 600;
+  width: auto;
+  margin: 5px;
+}
+
+.container .btn-readmore {
+  background-color: #1ac1b5;
+  color: #fff;
+}
+
+.container .btn-buynow {
+  background-color: #e58f23;
+  color: #fff;
+}
+
+.container .btn-prev, .container .btn-next {
+  background-color: #b1c3c2;  
+  color: #2c2b3d; 
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 6px 18px;
+  border: none;
+  font-size: 1rem;
+}
+
+.container .btn-prev:hover, .container .btn-next:hover {
+  background-color: #1ac1b5;  
+  color: #fff;  
+}
+
+.container .btn-prev:disabled, .container .btn-next:disabled {
+  background-color: #e0e0e0;  
+  color: #b0b0b0; 
+}
+
+.page-info {
+  color: #2a2a3f;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
