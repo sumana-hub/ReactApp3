@@ -8,6 +8,7 @@ const AddBook = () => {
     description: "",
     price: "",
     category: "",
+    long_description: "",  // Added long_description field
   });
 
   const handleFormChange = (e) => {
@@ -18,7 +19,14 @@ const AddBook = () => {
     e.preventDefault();
     await axios.post("http://localhost/bookstore_server/api/add_book.php", formData);
     alert("Book added successfully!");
-    setFormData({ title: "", author: "", description: "", price: "", category: "" });
+    setFormData({
+      title: "",
+      author: "",
+      description: "",
+      price: "",
+      category: "",
+      long_description: "",  // Reset long_description
+    });
   };
 
   return (
@@ -53,6 +61,16 @@ const AddBook = () => {
             name="description"
             className="form-control"
             value={formData.description}
+            onChange={handleFormChange}
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label className="form-label">Long Description</label>
+          <textarea
+            name="long_description"  // Added long_description field
+            className="form-control"
+            value={formData.long_description}
             onChange={handleFormChange}
             required
           />

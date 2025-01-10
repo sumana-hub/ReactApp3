@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import BookList from "./components/BookList";
 import AddBook from "./components/AddBook";
 import Cart from "./components/Cart";
+import BookDetails from "./components/BookDetails";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<BookList />} />
           <Route path="/add-book" element={<AddBook />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/book-details/:id" element={<BookDetails />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,4 +1,5 @@
- import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 const BookList = () => {
@@ -29,7 +30,7 @@ const BookList = () => {
                 <p className="card-text book-price">${book.price}</p>
                 <p className="card-text text-muted">Category: {book.category}</p>
                 <div className="d-flex justify-content-center">
-                  <button className="btn btn-readmore me-2">Read More</button> 
+                  <Link to={`/book-details/${book.id}`} className="btn btn-readmore me-2">Read More</Link>
                   <button className="btn btn-buynow">Add To Cart</button>
                 </div>
               </div>
@@ -53,7 +54,6 @@ const BookList = () => {
         >
           Next
         </button>
-
       </div>
     </div>
   );
