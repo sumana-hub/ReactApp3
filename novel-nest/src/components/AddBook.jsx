@@ -8,7 +8,7 @@ const AddBook = () => {
     description: "",
     price: "",
     category: "",
-    long_description: "",  // Added long_description field
+    long_description: "",  
   });
 
   const handleFormChange = (e) => {
@@ -25,7 +25,7 @@ const AddBook = () => {
       description: "",
       price: "",
       category: "",
-      long_description: "",  // Reset long_description
+      long_description: "",  
     });
   };
 
@@ -68,7 +68,7 @@ const AddBook = () => {
         <div className="mb-3">
           <label className="form-label">Long Description</label>
           <textarea
-            name="long_description"  // Added long_description field
+            name="long_description"  
             className="form-control"
             value={formData.long_description}
             onChange={handleFormChange}

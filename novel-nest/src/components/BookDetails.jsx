@@ -3,12 +3,12 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const BookDetails = () => {
-  const { id } = useParams(); // Get the book ID from the route
-  const [book, setBook] = useState(null); // State for book data
-  const [loading, setLoading] = useState(true); // Loading indicator
-  const [error, setError] = useState(null); // Error message
-  const [likeCount, setLikeCount] = useState(0); // Like button count
-  const [dislikeCount, setDislikeCount] = useState(0); // Dislike button count
+  const { id } = useParams(); 
+  const [book, setBook] = useState(null); 
+  const [loading, setLoading] = useState(true); 
+  const [error, setError] = useState(null); 
+  const [likeCount, setLikeCount] = useState(0); 
+  const [dislikeCount, setDislikeCount] = useState(0); 
 
   useEffect(() => {
     const fetchBookDetails = async () => {
@@ -16,8 +16,8 @@ const BookDetails = () => {
         const res = await axios.get(`http://localhost/bookstore_server/api/fetch_book_details.php?id=${id}`);
         if (res.data.success) {
           setBook(res.data.book);
-          setLikeCount(res.data.book.like_count); // Set initial like count
-          setDislikeCount(res.data.book.dislike_count); // Set initial dislike count
+          setLikeCount(res.data.book.like_count); 
+          setDislikeCount(res.data.book.dislike_count); 
         } else {
           setError(res.data.message || "Book details not found.");
         }
@@ -38,7 +38,7 @@ const BookDetails = () => {
         id,
         action: "like",
       });
-      setLikeCount(likeCount + 1); // Update local like count
+      setLikeCount(likeCount + 1); 
     } catch (error) {
       console.error("Error updating like count:", error);
     }
@@ -51,7 +51,7 @@ const BookDetails = () => {
         id,
         action: "dislike",
       });
-      setDislikeCount(dislikeCount + 1); // Update local dislike count
+      setDislikeCount(dislikeCount + 1); 
     } catch (error) {
       console.error("Error updating dislike count:", error);
     }
